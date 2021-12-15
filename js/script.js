@@ -7,10 +7,11 @@ function flat(arr, ...args) {
 			"Function accepts only 1 argument, too much arguments provided"
 		);
 
-	let newArray = [].concat(...arr);
-	return console.log(newArray);
+	let newArray = arr.join().split(",");
+	let result = newArray.map(Number);
+	return console.log(result);
 }
-array = [1, 2, [1, 2], [3, 4], [5, 6], 9];
+array = [1, 2, [1, 2], [3, [5, 6], 4], [5, 6], 9];
 array2 = [1, 2, 3, 4, 5, 6];
 let a = 123;
 flat(array);
